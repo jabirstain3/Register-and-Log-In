@@ -1,13 +1,17 @@
 // import { useState } from 'react'
-import './App.css'
+import { Outlet } from 'react-router-dom'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='text-3xl font-bold text-center'>Registration and Log In</h1>
-    </>
+    <div className='w-10/12 m-auto'>
+      <section className='sticky top-0 z-50' >
+        <Navbar/>
+      </section>
+      <Outlet>
+      </Outlet>
+    </div>
   )
 }
 
